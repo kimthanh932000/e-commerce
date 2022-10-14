@@ -1,0 +1,9 @@
+
+.products-container {
+    gap: 20px;
+    padding: 20px;
+
+    @media only screen and (max-width: 395px) {
+        flex-wrap: wrap;
+    }
+}
