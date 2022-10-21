@@ -45,6 +45,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+p {
+  margin: 0;
+}
+
 /* utils */
 
 .u-d-flex {
@@ -128,6 +132,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .u-fw-bold {
   font-weight: 600;
+}
+
+.u-overflow-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* container */
