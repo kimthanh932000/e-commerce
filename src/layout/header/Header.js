@@ -3,7 +3,7 @@ import './style.scss'
 import logo from '../../assets/images/logo.png'
 import { MdShoppingCart } from "react-icons/md";
 
-const Header = () => {
+const Header = ({totalItems}) => {
   return (
     <header className='l-header u-d-flex u-space-between'>
       <div className="p-logo">
@@ -14,7 +14,7 @@ const Header = () => {
       </div>
       <div className="p-cart u-d-flex u-align-center">
         <a href="#" className='p-cart__link'>
-          <span className="p-cart__count">2</span>
+          <span className="p-cart__count">{totalItems}</span>
           <MdShoppingCart className='p-cart__icon'/>
         </a>
       </div>

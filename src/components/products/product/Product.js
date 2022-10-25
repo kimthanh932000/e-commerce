@@ -2,7 +2,7 @@ import React from 'react'
 import './style.scss'
 import { MdShoppingCart } from "react-icons/md";
 
-const Product = ({ product }) => {
+const Product = ({ product, onAddToCart }) => {
   return (
     <div className='p-prod u-box-shadow u-d-flex u-flex-column u-border-radius-sm'>
       <div className="img-container">
@@ -16,7 +16,7 @@ const Product = ({ product }) => {
         <h5 dangerouslySetInnerHTML={{__html: product.description}} className="p-prod__description"></h5>
       </div>
       <div className="action u-d-flex u-flex-end">
-        <button className="p-prod__btn-cart">
+        <button className="p-prod__btn-cart" onClick={() => onAddToCart(product.id, 1)}>
           <MdShoppingCart />
         </button>
       </div>
