@@ -1,0 +1,50 @@
+.p-item {
+    width: 20%;
+    position: relative;
+    background: rgba(239, 239, 240);
+    border-radius: 5px;
+
+    @media only screen and (max-width: 768px) {
+        width: 31%;
+    }
+
+    @media only screen and (max-width: 610px) {
+        width: 45%;
+    }
+
+    @media only screen and (max-width: 395px) {
+        width: 100%;
+    }
+
+    .img-container {
+        width: 100%;
+    }
+    
+    &__img {
+        max-width: 100%;
+    }
+
+    .content {
+        padding: 15px 10px;
+    }
+
+    &__name {
+        width: 60%;
+    }
+
+    &__price {
+        line-height: 1.5;
+    }
+
+    &__quantity {
+        line-height: 2.5;
+    }
+
+    &__btn:hover {
+        background: rgb(224, 222, 222);
+    }
+
+    .action {
+        padding: 5px;
+    }
+}
