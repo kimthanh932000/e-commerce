@@ -1,11 +1,12 @@
 import React from 'react';
 import './style.scss';
 import { CartItem } from '../../components';
+import {Link} from 'react-router-dom';
 
 const Cart = ({ cart }) => {
 
     const EmptyCart = () => (
-        <h3>You have no items in your shopping cart, start adding some!</h3>
+        <h3>You have no items in your shopping cart, <Link to='/' className='text-primary'>start adding some!</Link></h3>
     );
 
     const FilledCart = () => (
@@ -17,7 +18,7 @@ const Cart = ({ cart }) => {
             </div>
             <div className="p-cart__action u-d-flex u-space-between u-align-center">
                 <h3 className="p-cart__total">
-                    Subtotal: {cart.subtotal.formatted_with_symbol}
+                    Subtotal: <strong>{cart.subtotal.formatted_with_symbol}</strong>
                 </h3>
                 <div>
                     <button className="p-cart__action-empty c-btn c-btn-danger u-text-white u-margin-right-md">
