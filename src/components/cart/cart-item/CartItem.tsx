@@ -3,10 +3,12 @@ import './style.scss';
 import {ICartItem} from "../../../interface";
 
 type Props = {
-    item: ICartItem
+    item: ICartItem,
+    onUpdateCartQty: (productId: number, quantity: number) => void,
+    onRemoveFromCart: (productId: number) => void
 }
 
-const CartItem = ({ item }: Props) => {
+const CartItem = ({ item, onUpdateCartQty, onRemoveFromCart }: Props) => {
     return (
         <div className="p-item">
             <div className="img-container">
@@ -27,10 +29,10 @@ const CartItem = ({ item }: Props) => {
                 </div>
             </div>
             <div className="action u-d-flex u-space-between">
-                <button className='c-btn p-item__btn'>-</button>
+                <button className='c-btn p-item__btn' onClick={() => onUpdateCartQty(item.id, item.quantity - 1)}>-</button>
                 <span className='p-item__quantity'>{item.quantity}</span>
-                <button className='c-btn p-item__btn'>+</button>
-                <button className="c-btn c-btn-danger u-text-white">Remove</button>
+                <button className='c-btn p-item__btn' onClick={() => onUpdateCartQty(item.id, item.quantity + 1)}>+</button>
+                <button className="c-btn c-btn-danger u-text-white" onClick={() => onRemoveFromCart(item.id)}>Remove</button>
             </div>
         </div>
     );
