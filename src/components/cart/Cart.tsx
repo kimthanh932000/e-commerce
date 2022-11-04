@@ -1,12 +1,16 @@
 import React from 'react';
 import './style.scss';
-import { CartItem } from '../../components';
+import { CartItem } from '../index';
 import {Link} from 'react-router-dom';
+import {ICart} from '../../interface/index'
 
-const Cart = ({ cart }) => {
+type Props = {
+    cart: ICart
+}
+const Cart = ({ cart }: Props) => {
 
     const EmptyCart = () => (
-        <h3>You have no items in your shopping cart, <Link to='/' className='text-primary'>start adding some!</Link></h3>
+        <h3>You have no items in your shopping cart, <Link to='/' className='text-primary' style={{color: 'blue'}}>start adding some!</Link></h3>
     );
 
     const FilledCart = () => (
@@ -33,7 +37,7 @@ const Cart = ({ cart }) => {
     );
 
     if (!cart.line_items) {
-        return 'Loading...';
+        return <h1>'Loading...'</h1>;
     }
 
     return (

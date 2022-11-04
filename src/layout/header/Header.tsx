@@ -4,7 +4,11 @@ import logo from '../../assets/images/logo.png';
 import { MdShoppingCart } from 'react-icons/md';
 import { Link, useLocation } from 'react-router-dom';
 
-const Header = ({ totalItems }) => {
+type Props = {
+    totalItems: number
+}
+
+const Header = ({ totalItems }: Props) => {
     const location = useLocation();
 
     return (

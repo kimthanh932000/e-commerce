@@ -1,7 +1,12 @@
 import React from 'react';
 import './style.scss';
+import {ICartItem} from "../../../interface";
 
-const CartItem = ({ item }) => {
+type Props = {
+    item: ICartItem
+}
+
+const CartItem = ({ item }: Props) => {
     return (
         <div className="p-item">
             <div className="img-container">

@@ -1,8 +1,14 @@
 import React from 'react'
 import './style.scss'
 import { MdShoppingCart } from "react-icons/md";
+import {IProduct} from '../../../interface/index';
 
-const Product = ({ product, onAddToCart }) => {
+type Props = {
+    product: IProduct,
+    onAddToCart: (productId: number, quantity: number) => void
+}
+
+const Product = ({ product, onAddToCart }: Props) => {
   return (
     <div className='p-prod u-box-shadow u-d-flex u-flex-column u-border-radius-sm'>
       <div className="img-container">

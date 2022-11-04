@@ -1,8 +1,14 @@
 import React from 'react'
 import './style.scss'
-import Product from './product/Product'
+import {Product} from '../../components'
+import {IProduct} from '../../interface/index'
 
-const Products = ({products, onAddToCart}) => {
+type Props = {
+  products: IProduct[],
+  onAddToCart: (productId: number, quantity: number) => void
+}
+
+const Products = ({products, onAddToCart}: Props) => {
   return (
     <div className='products-container u-d-flex u-flex-wrap u-justify-center'>
       {
