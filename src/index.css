@@ -134,6 +134,14 @@ p {
   margin-right: 5px;
 }
 
+.u-mb-sm {
+  margin-bottom: 5px;
+}
+
+.u-mb-md {
+  margin-bottom: 15px;
+}
+
 .u-space-nowrap {
   white-space: nowrap;
 }

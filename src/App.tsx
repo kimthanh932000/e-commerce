@@ -2,7 +2,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import Layout from './layout';
 import { commerce } from './lib/commerce';
-import { Products, Cart } from './components';
+import { Products, Cart, Checkout } from './components';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import 'bootstrap-css-only/css/bootstrap.min.css';
 import { ICart, IProduct } from './interface/index';
@@ -80,6 +80,10 @@ function App() {
                                     onEmptyCart={handleEmptyCart}
                                 />
                             }
+                        />
+                        <Route
+                            path="/checkout"
+                            element={<Checkout/>}
                         />
                     </Routes>
                 </Layout>
