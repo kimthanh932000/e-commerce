@@ -1,0 +1,14 @@
+.p-checkout {
+    width: 700px;
+    // min-width: 500px;
+    // height: 500px;
+    box-shadow: var(--box-shadow);
+    margin: 0 auto;
+    padding: 15px;
+
+    &__ttl {
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+}
